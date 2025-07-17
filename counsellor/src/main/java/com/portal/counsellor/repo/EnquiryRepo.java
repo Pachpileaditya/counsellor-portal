@@ -18,6 +18,9 @@ public interface EnquiryRepo extends JpaRepository<Enquiry, Integer>
 
     @Query(value = "select * from enquiry where c_id = :counsellorId", nativeQuery = true)
     List<Enquiry> getAllEnquiresByCounsellorId(Integer counsellorId);
+
+    @Query("SELECT e FROM Enquiry e JOIN FETCH e.counsellor")
+    List<Enquiry> findAllWithCounsellor();
  
 
 

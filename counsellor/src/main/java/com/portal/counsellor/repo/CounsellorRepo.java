@@ -14,8 +14,8 @@ public interface CounsellorRepo extends JpaRepository<Counsellor, Integer>
 
 
     Optional<Counsellor> findByEmail(String email);
-
-    Optional<Counsellor> findByEmailAndPassword(String email, String password);
+    
+    boolean existsByEmail(String email);
 	
 
 }

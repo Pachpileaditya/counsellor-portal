@@ -37,5 +37,8 @@ public class Counsellor
 
 	@Column(name = "pass")
 	private String password;
+
+    @Column(name = "role")
+    private String role = "USER";
 	
 }
